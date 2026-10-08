@@ -50,9 +50,10 @@ class LinkedList:
             curr.next=prev
             prev=curr
             curr =nextNode
-        return prev
+        self.head=prev
     # Display the linked list
     def print(self):
+        print("List")
         temp = self.head
 
         while temp:
@@ -72,10 +73,5 @@ list.append(Node(40))
 
 print("Original Linked List:")
 list.print()
-
-list.delete_node(20)
-
-print("After deleting 20:")
+list.reverse()
 list.print()
-
-list.delete_node(50)
