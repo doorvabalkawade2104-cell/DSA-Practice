@@ -39,3 +39,6 @@ st.push(Node(30))
 st.push(Node(40))
 st.push(Node(50))
 st.print()
+st.pop()
+st.print()
+
