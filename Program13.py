@@ -34,7 +34,6 @@ class Stack:
             print(temp.data)
             temp = temp.next
 
-
 def reverse_stack(st1, st2):
     while not st1.isempty():
         value = st1.pop()

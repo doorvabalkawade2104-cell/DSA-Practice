@@ -8,7 +8,6 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    # 1. Create Linked List / Insert at end
     def append(self, value):
         new_node = Node(value)
 
@@ -22,7 +21,6 @@ class LinkedList:
 
         temp.next = new_node
 
-    # 2. Traverse and print node values
     def traverse(self):
         temp = self.head
 
@@ -32,7 +30,6 @@ class LinkedList:
 
         print("None")
 
-    # 3. Insert node at a specific position (0-based)
     def insert_at_position(self, value, position):
         new_node = Node(value)
 
@@ -58,8 +55,6 @@ class LinkedList:
 
         new_node.next = temp.next
         temp.next = new_node
-
-    # 4. Find middle node
     def find_middle(self):
         if self.head is None:
             print("List is empty")
@@ -74,7 +69,6 @@ class LinkedList:
 
         print("Middle node:", slow.data)
 
-    # 5. Delete node by value
     def delete_node(self, value):
         temp = self.head
         prev = None
@@ -94,8 +88,6 @@ class LinkedList:
             self.head = temp.next
         else:
             prev.next = temp.next
-
-    # 6. Reverse linked list
     def reverse(self):
         prev = None
         curr = self.head
@@ -108,7 +100,6 @@ class LinkedList:
 
         self.head = prev
 
-    # 7. Sum of every two consecutive nodes
     def sum_consecutive(self):
         temp = self.head
 
@@ -121,10 +112,10 @@ class LinkedList:
             temp = temp.next
 
 
-# Main program
+
 list1 = LinkedList()
 
-# Create linked list
+
 list1.append(10)
 list1.append(20)
 list1.append(30)
@@ -133,25 +124,15 @@ list1.append(50)
 
 print("Original Linked List:")
 list1.traverse()
-
-# Insert at specific position
 list1.insert_at_position(25, 2)
 print("After inserting 25 at position 2:")
 list1.traverse()
-
-# Find middle node
 list1.find_middle()
-
-# Delete node
 list1.delete_node(30)
 print("After deleting 30:")
 list1.traverse()
-
-# Reverse linked list
 list1.reverse()
 print("Reversed Linked List:")
 list1.traverse()
-
-# Sum of consecutive nodes
 print("Sum of consecutive nodes:")
 list1.sum_consecutive() 
